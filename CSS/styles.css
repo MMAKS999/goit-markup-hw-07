@@ -31,6 +31,42 @@ Declaration order
 }
 
 
+body {
+   
+    /* width: 1440px;
+    margin-left: auto;
+    margin-right: auto; */
+    
+            
+    color:var( --text-color);
+    font-family:'Roboto', sans-serif;
+    letter-spacing: 0.02em;
+    background-color:var(--white-color) ;
+    font-size: 16px;
+    line-height: 1.5;    
+} 
+
+h1,h2,h3,p,a{
+    margin: 0;
+    padding: 0;
+}
+
+/* переведення зображень в блоки щоб прибрати паразитні падінги */
+img{
+    display: block;
+    max-width: 100%;
+}
+/* прибирання крапок переліку  */
+
+.list{
+    list-style: none;
+}
+
+
+header{
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
 
 
 
@@ -59,22 +95,7 @@ Declaration order
     padding-bottom: 112px ;
 }
 
-.overlay{
-    
-    max-width: 428px;
-    margin-left: auto;
-    margin-right: auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 
-    background-image: linear-gradient(
-        to right,
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)),  
-        url(../images/people_office.jpg); 
-        
-}
 
 .hero-title{
     margin-bottom: 72px;
@@ -240,41 +261,6 @@ Declaration order
 
 
 
-body {
-   
-    /* width: 1440px;
-    margin-left: auto;
-    margin-right: auto; */
-    
-            
-    color:var( --text-color);
-    font-family:'Roboto', sans-serif;
-    letter-spacing: 0.02em;
-    background-color:var(--white-color) ;
-    font-size: 16px;
-    line-height: 1.5;    
-} 
-
-/* прибирання крапок переліку  */
-h1,h2,h3,p,a{
-    margin: 0;
-    padding: 0;
-}
-
-/* переведення зображень в блоки щоб прибрати паразитні падінги */
-img{
-    display: block;
-    max-width: 100%;
-}
-
-.list{
-    list-style: none;
-}
-
-
-header{
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
 
 /* ====================зображення героя======================== */
 .overlay{
@@ -447,11 +433,6 @@ footer{
     line-height: 1.5;
   
 }
-h3{
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;  
-}
 
 
 .footer-social-list{
@@ -461,15 +442,6 @@ h3{
 }
 
 .footer-element-social{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    height: 40px;
-    width: 40px;
-    background-color: var(--text-color);
-    border-radius: 50%;  
-    
     transition: background-color 250ms var(--cubic-bezier);
 }
 
@@ -601,6 +573,12 @@ h3{
 
     .wedoing{
         display: none;
+    }
+
+    h3{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;  
     }
         
 
@@ -773,9 +751,14 @@ h3{
 }
 
 /* ======================================Tablet================================= */
-@media screen and (max-width:1440px){
+@media screen and (max-width:1200px){
     .wedoing{
         display: none;
+    }
+    .service-list-item{
+        
+        width: 356px;
+        
     }
 }
 
@@ -803,24 +786,13 @@ h3{
     .block-nav{
         display: flex;
         align-items: center;
-    } 
-    .block-nav{
-        display: flex;
-        align-items: center;
-
     }
     .logo{
         padding-top: 24px ;
         padding-bottom: 24px;
       
-        font-family: 'Raleway';
-        font-weight: 800;
-        font-size: 18px;
-        line-height: 1.33;
         letter-spacing: 0.03em;
-        text-transform:uppercase;
-        text-decoration: none;
-        color:var(--dark-color)    
+        
     } 
     
     .site-nav{    
@@ -842,25 +814,25 @@ h3{
 
 /*header  панель навігації студія-контакт */
 
- .nav-link{
-    display: block;
-    padding:  24px 0;
+    .nav-link{
+        display: block;
+        padding:  24px 0;
 
 
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    color:var(--dark-color);
-    text-decoration: none;  
-    
-    transition: color 250ms var(--cubic-bezier) ;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        color:var(--dark-color);
+        text-decoration: none;  
+        
+        transition: color 250ms var(--cubic-bezier) ;
     }
 
     .nav-link:hover,
     .nav-link:focus{
         color:var(--prbrand-color);
     } 
-    /* Виділення активної сторінки, підкреслення */
+    /* Виділення активної сторінки */
     .nav-link.current{
         color:var(--prbrand-color);
         
@@ -922,45 +894,15 @@ h3{
 
     .overlay{
         
-        max-width: 768px;
-        margin-left: auto;
-        margin-right: auto;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-       
+        max-width: 100%;
+            
     }
 
     .hero-title{
-        margin-bottom: 48px;
-        
-        color:var(--light-color) ;
-        font-weight: 700;
-        font-size: 56px;
-        line-height: 1.07;
-        text-align: center;    
+        margin-bottom: 48px;               
+        font-size: 56px;         
     }
-        
-    .button-hero{
-        border-radius: 4px;
-        padding: 16px 32px;
-        border: 0px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.2;   
-        background-color:var(--prbrand-color);
-        color:var(--light-color);
-        letter-spacing:0.04em;
-        cursor:pointer;      
-    }
-                  
-    .button-hero:hover{
-        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    
-    }
     .service{
         text-align: left; 
     }
@@ -976,20 +918,12 @@ h3{
         margin: 0;   
          
     }
-    .service-list-item{
-        
-        width: 356px;
-        
-    }
+   
     .servic-subh{
         text-align: left; 
     }
 
-    .our-team{      
-        text-align: center;
-        background-color: var(--light-color);    
-    }
-    
+        
     .section{
         padding-bottom: 96px;
         padding-top:96px ;
@@ -999,7 +933,6 @@ h3{
     .our-team-list{
         display: flex;
         flex-wrap: wrap;
-        padding-left: 0;
         justify-content: center;
         
         gap: 64px 24px;
@@ -1009,55 +942,15 @@ h3{
     
     .team-icon{
         margin-top: 0px;
-        background-color: var(--white-color);
-        border-radius: 0px 0px 4px 4px;
-        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    }
-    
-    .team-text{
-        padding-top: 32px;
-        padding-bottom: 32px;
-    }
-    
+    }    
+      
     .section-title{
-        margin-bottom: 72px;
-    
-        color:var(--dark-color) ;
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 1.12;
-        text-transform:capitalize;   
+        margin-bottom: 72px;   
     }
-    
-    .team-social{
-        display: flex;
-        justify-content: center;
-        
-        padding: 0;
-        margin-top: 12px;
-        gap: 16px;
-    }
-    
-    .element-social{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        height: 40px;
-        width: 40px;
-        background-color: #4D5AE5;
-        border-radius: 50%;    
-    }   
-    
-    .team-svg{
-        height: 16px;
-        width: 16px;
        
-        fill: var(--light-color);          
-    }
-
+  
     .customer-list{
-        justify-content: center;
+       
         gap: 72px 24px ;
         margin-top: 72px;
     }
@@ -1099,12 +992,9 @@ h3{
 .footer-social{
     margin-left: 24px;
     margin-right: 55px;
-    width: 208px;
     padding: 0;
 
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
+   
 }
 .footer-social-list{
     display: flex;
@@ -1143,7 +1033,6 @@ h3{
 }
 .footer-form {
     display: flex;
-
     padding-right:98px ;
 }
 
@@ -1164,15 +1053,7 @@ h3{
 @media screen and (min-width: 1200px) {
     .logo{
         padding-top: 24px ;
-        padding-bottom: 24px;
-      
-        font-family: 'Raleway';
-        font-weight: 800;
-        font-size: 18px;
-        line-height: 1.33;
-        text-transform:uppercase;
-        text-decoration: none;
-        color:var(--dark-color)    
+        padding-bottom: 24px;              
     }
 
     .container{
@@ -1184,7 +1065,7 @@ h3{
         } 
 
     .site-nav{    
-     margin-left: 77px;       
+     margin-left: 76px;       
     } 
 
     .site-nav .item + .item {
@@ -1240,13 +1121,16 @@ h3{
     display: flex;
     padding: 0;
     margin: 0;
-    margin-left: 331px;   
+    margin-left: 320px;   
 } 
 
 .contact-link{
     display: block;
     padding:  24px 0;
 
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
     text-decoration: none;
     color: var(--text-color);
 
@@ -1276,48 +1160,6 @@ h3{
            
 }
 
-.hero-title{
-    margin-bottom: 48px;
-    
-    color:var(--light-color) ;
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
-    text-align: center;    
-}
-    
-.button-hero{
-    border-radius: 4px;
-    padding: 16px 32px;
-    border: 0px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.2;   
-    font-family: inherit;
-    background-color:var(--prbrand-color);
-    color:var(--light-color);
-    letter-spacing:0.04em;
-    cursor:pointer;
-
-    
-}
-    
-        
-   
-.button-hero:hover{
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-   
-}
-
-.button-hero:focus{
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    background-color:#404BBF; 
-    color:var(--white-color);
-}     
-
 /* Секція 2 скіли */
 
 
@@ -1340,13 +1182,8 @@ h3{
 }
 
 .service-list{
-    display: flex;
     flex-wrap: nowrap;
-    padding-left: 0;
-    justify-content: space-between;
     gap: 22px;
-
-    margin: 0;    
 }
 
 .service-list-item::before{
@@ -1377,15 +1214,10 @@ h3{
 
 
 .servic-subh{
-    
-    margin-bottom: 8px;
     margin-top: 8px;
-
-    font-weight: 700;
+    
     font-size: 20px;
-    line-height: 1.2; 
-    text-transform:capitalize;
-    color:var(--dark-color);
+    line-height: 1.2;     
 } 
 
 /* ситлі для секцій  при потребі попередню теж можна обєднати*/
@@ -1410,73 +1242,10 @@ h3{
 
 /* Our team --> */
 
- .our-team{      
-    text-align: center;
-    background-color: var(--light-color);    
-}
-
 .section{
     padding-bottom: 120px;
-    padding-top:120px ;
-    
+    padding-top:120px ;    
 }
-
-.our-team-list{
-    display: flex;
-    padding-left: 0;
-    justify-content: space-between;
-    margin-top: 0;
-    margin-bottom:0px ;
-}
-
-.team-icon{
-    background-color: var(--white-color);
-    border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-
-.team-text{
-    padding-top: 32px;
-    padding-bottom: 32px;
-}
-
-.section-title{
-    margin-bottom: 72px;
-
-    color:var(--dark-color) ;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.12;
-    text-transform:capitalize;   
-}
-
-.team-social{
-    display: flex;
-    justify-content: center;
-    
-    padding: 0;
-    margin-top: 12px;
-    gap: 16px;
-}
-
-.element-social{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    height: 40px;
-    width: 40px;
-    background-color: #4D5AE5;
-    border-radius: 50%;    
-}   
-
-.team-svg{
-    height: 16px;
-    width: 16px;
-   
-    fill: var(--light-color);
-      
-} 
 
 /* Customers */
 
@@ -1491,55 +1260,13 @@ h3{
     
 
 }
-
-.customer-list{
-    margin-bottom: 0;
-    margin-top: 72px;
-
-    display: flex;
-    padding: 0;
-    justify-content:space-between;
-  
-}
-.customer-svg{
-    height: 56px;
-    width: 104px;
-
-}
-
-
-.customer-link{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 88px;
-    width: 168px;
-
-    fill:var(--subtle-color);
-    border: 1px solid var(--subtle-color);
-    border-radius: 4px;
-
-    transition: fill 250ms var(--cubic-bezier),
-                border 250ms var(--cubic-bezier);
-   
-}
-
-.customer-link:hover,    
-.customer-link:focus{
-    fill:var(--prbrand-color); 
-    border: 1px solid var(--prbrand-color);
-}
  
 /* футер зміна кольорів */
- footer{
-    background-color:var(--dark-color);
-    color:var(--accent-color) ;
-}
-
 .footer-block{
-    display: flex;
+    flex-wrap: nowrap;
+    justify-content:inherit;
     padding-top:100px ;  
-    padding-bottom: 100px;
+    padding-bottom: 100px;  
 }
 
 .logo-footer{
@@ -1549,52 +1276,82 @@ h3{
     color:var(--light-color);
 }
 
-.footer-text{
-    width: 264px;
-    margin-top: 16px;
-}
 
 .footer-social{
     margin-left: 120px;
+    margin-right: 0;
     width: 208px;
+}
+
+/* =====================================footer form============================================ */
+ .subscribe-titel{
+    margin-left: 80px ;
+    margin-top: 0;
+}
+
+.footer-form{
+    display: flex;
+    align-items: center;
+    padding-right:0;
+    
+    
+}
+
+.footer-form-input{
+    width: 264px ;
+    height: 40px;       
+}
+
+.footer-form-input::placeholder{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-form-button{
+    display:inline-flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+      
+    
+
+    min-width: 165px;
+    height: 40px;
+    border-radius: 4px;    
+    border: 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
 
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 2;     
+    background-color:var(--prbrand-color);
+    color:var(--light-color);
+    letter-spacing:0.04em;
+    cursor:pointer;
 }
-.footer-social-list{
-    display: flex;
-    justify-content: space-between;
-    padding:0px;
-}
-
-.footer-element-social{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    height: 40px;
-    width: 40px;
-    background-color: var(--text-color);
-    border-radius: 50%;  
-    
-    transition: background-color 250ms var(--cubic-bezier);
+   
+.subscribe-form-button:hover{
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+   
 }
 
-.footer-element-social:hover,
-.footer-element-social:focus{
-    background-color:#31D0AA;
+.subscribe-form-button:focus{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color:#404BBF; 
+    color:var(--white-color);
 }
 
-.footer-team-svg{
+.subscribe-form-button::after{
+    content: '';
     width: 24px;
     height: 24px;
-    
-
-    fill: var(--light-color);
+    margin-left: 16px ;
+    background-image: url(../images/svg/fly.svg);
 } 
-
-
 
 }
 

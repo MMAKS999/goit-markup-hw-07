@@ -195,7 +195,6 @@ header{
 }
 
 .team-icon{
-    display: inline-block;
     width: 264px;
     margin-top: 72px;
     
@@ -423,8 +422,6 @@ footer{
     margin-right: auto;
     margin-left: auto;
     width: 208px;
-    margin-top: 72px;
-    margin-bottom: 72px;
 
     font-weight: 500;
     font-size: 16px;
@@ -437,6 +434,7 @@ footer{
     display: flex;
     justify-content: space-between;
     padding:0px;
+    margin-bottom: 0;
 }
 
 .footer-element-social{
@@ -588,6 +586,14 @@ footer{
         line-height: 24px;  
     }
         
+    .team-icon{
+        display: inline-block;
+    }
+
+    .footer-social{
+        margin-top: 72px;
+        margin-bottom: 72px;
+    }
 
     /* ======================Mobile menu========================== */
     
